@@ -24,14 +24,14 @@ CREATE DATABASE nome_do_banco;
 ## 3.2 Criar Tabelas
 script sql <br>
 CREATE TABLE User ( <br>
-    id SERIAL PRIMARY KEY, <br>
+    id INTEGER PRIMARY KEY, <br>
     name VARCHAR(100) NOT NULL, <br>
     email VARCHAR(100) NOT NULL UNIQUE, <br>
     password VARCHAR(100) NOT NULL <br> 
 );
 <br>
 CREATE TABLE Task ( <br>
-    id SERIAL PRIMARY KEY, <br> 
+    id INTEGER PRIMARY KEY, <br> 
     title VARCHAR(200) NOT NULL, <br>
     description TEXT NOT NULL, <br>
     status INTEGER REFERENCES usuarios(id), <br>
