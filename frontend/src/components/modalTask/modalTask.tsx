@@ -64,7 +64,7 @@ const modalTask = ({ setModalTask, setTasks }: Props) => {
                 <textarea className={styles.textarea} onChange={(e) => setDescription(e.target.value)} />
 
                 <label>Status</label>
-                <select className="form-select" aria-label="Default select example">
+                <select className="form-select" aria-label="Default select example" onChange={(e) => setStatus(e.target.value)}>
                     <option selected value='Pendente'>Pendente</option>
                     <option value="Em progresso">Em progresso</option>
                     <option value="Concluída">Concluída</option>
