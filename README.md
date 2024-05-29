@@ -67,7 +67,7 @@ npm run dev <br>
  ### Está configurada com a seguinte rota: <br>
 http://localhost:3000/doc 
 
-Com o servidor backend rodando, é possível o acesso dessa documentação!
+Com o servidor backend rodando, é possível o acesso à essa documentação!
 
 
 
