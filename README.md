@@ -1,6 +1,6 @@
 # DesafioTecnico
 
-Projeto de teste prático com um to-do-list, tendo backend e frontend com funcionalidades de listagem de tarefas, atualizações de tarefas, criação de tarefas e exclusão de tarefas. Com uma implementação de cadastro e autenticação de usuário (JWT)
+Projeto de teste prático com um to-do-list, tendo backend e frontend com funcionalidades de listagem de tarefas, atualizações de tarefas, criação de tarefas e exclusão de tarefas, e com uma implementação de cadastro e autenticação de usuário (JWT)
 
 # Requisitos
 - Node Js
