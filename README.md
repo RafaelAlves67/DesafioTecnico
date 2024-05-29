@@ -39,7 +39,7 @@ CREATE TABLE Task ( <br>
 );
 
 # 4. Configurar Variáveis de Ambiente
-O arquivo .env subiu junto com projeto devido se passar de somente um teste prático, e está configurado para uma máquina local <br> 
+O arquivo .env subiu junto com projeto devido se passar somente de um teste prático, e está configurado para uma máquina local. <br> 
 DB_USER=postgres <br> 
 DB_PASSWORD=1234 <br> 
 DB_NAME=db_moisacQ <br> 
@@ -47,7 +47,7 @@ SECRET=KCJJKCNAWJCBNWJABCAW347235752<br>
 DB_HOST=localhost <br>
 DB_PORT=5432 <br>
 
-edite de acordo com seu ambiente <br>
+edite de acordo com seu ambiente de desenvolvimento e banco de dados <br>
 
 # 5. Rodas aplicação
 ## 5.1 para inicar o front-end, execute os seguintes comandos: 
