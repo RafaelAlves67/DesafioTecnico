@@ -13,7 +13,7 @@ git clone https://github.com/RafaelAlves67/DesafioTecnico.git
 cd DesafioTecnico
 
 # 2. Instalar Depedências 
-Certifique-se de ter o Node.js e o npm instalados. Em seguida, execute:
+Certifique-se de ter o Node.js e o npm instalados. <br> Em seguida, execute:
 npm install 
 
 # 3. Configuração do Banco de Dados
