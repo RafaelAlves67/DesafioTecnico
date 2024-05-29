@@ -2,6 +2,10 @@
 
 Projeto de teste prático com um to-do-list, tendo backend e frontend com funcionalidades de listagem de tarefas, atualizações de tarefas, criação de tarefas e exclusão de tarefas. Com uma implementação de cadastro e autenticação de usuário (JWT)
 
+# Requisitos
+- Node Js
+- PostgreSQL
+
 # Configuração do Ambiente de Desenvolvimento
 
 # 1. Clonar o Repositório
