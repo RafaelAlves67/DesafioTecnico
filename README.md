@@ -43,6 +43,7 @@ CREATE TABLE Task ( <br>
 
 # 4. Configurar Variáveis de Ambiente
 O arquivo .env subiu junto com projeto devido se passar somente de um teste prático, e está configurado para uma máquina local. <br> 
+<br>
 DB_USER=postgres <br> 
 DB_PASSWORD=1234 <br> 
 DB_NAME=db_moisacQ <br> 
