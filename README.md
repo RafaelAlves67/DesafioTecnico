@@ -18,44 +18,44 @@ npm install
 
 # 3. Configuração do Banco de Dados
 ## 3.1 Criar Banco de Dados
-Conecte-se ao PostgreSQL e crie um banco de dados:
+Conecte-se ao PostgreSQL e crie um banco de dados: <br>
 CREATE DATABASE nome_do_banco;
 
 ## 3.2 Criar Tabelas
-script sql
-CREATE TABLE User (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(100) NOT NULL
+script sql <br>
+CREATE TABLE User ( <br>
+    id SERIAL PRIMARY KEY, <br>
+    name VARCHAR(100) NOT NULL, <br>
+    email VARCHAR(100) NOT NULL UNIQUE, <br>
+    password VARCHAR(100) NOT NULL <br> 
 );
-
-CREATE TABLE Task (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(200) NOT NULL,
-    description TEXT NOT NULL,
-    status INTEGER REFERENCES usuarios(id),
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+<br>
+CREATE TABLE Task ( <br>
+    id SERIAL PRIMARY KEY, <br> 
+    title VARCHAR(200) NOT NULL, <br>
+    description TEXT NOT NULL, <br>
+    status INTEGER REFERENCES usuarios(id), <br>
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP <br>
 );
 
 # 4. Configurar Variáveis de Ambiente
-O arquivo .env subiu junto com projeto devido se passar de somente um teste prático, e está configurado para uma máquina local
-DB_USER=postgres
-DB_PASSWORD=1234
-DB_NAME=db_moisacQ
-SECRET=KCJJKCNAWJCBNWJABCAW347235752
-DB_HOST=localhost
-DB_PORT=5432
+O arquivo .env subiu junto com projeto devido se passar de somente um teste prático, e está configurado para uma máquina local <br> 
+DB_USER=postgres <br> 
+DB_PASSWORD=1234 <br> 
+DB_NAME=db_moisacQ <br> 
+SECRET=KCJJKCNAWJCBNWJABCAW347235752<br>
+DB_HOST=localhost <br>
+DB_PORT=5432 <br>
 
-edite de acordo com seu ambiente
+edite de acordo com seu ambiente <br>
 
 # 5. Rodas aplicação
 ## 5.1 para inicar o front-end, execute os seguintes comandos: 
-cd frontend
-npm run dev
+cd frontend <br>
+npm run dev <br>
 ## 5.2 para inicar o front-end, execute os seguintes comandos: 
-cd backend
-npm run dev
+cd backend <br>
+npm run dev <br>
 
 
 
