@@ -37,7 +37,7 @@ CREATE TABLE Task ( <br>
     id INTEGER PRIMARY KEY, <br> 
     title VARCHAR(200) NOT NULL, <br>
     description TEXT NOT NULL, <br>
-    status INTEGER REFERENCES usuarios(id), <br>
+    status VARCHAR(100), <br>
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP <br>
 );
 
@@ -59,6 +59,14 @@ npm run dev <br>
 ## 5.2 para inicar o back-end, execute os seguintes comandos na raíz do projeto: 
 cd backend <br>
 npm run dev <br>
+
+# 6. Documentação da API (Swagger)
+ Documentação feita com a ferramenta Swagger <br>
+
+ ### Está configurada com a seguinte rota: <br>
+http://localhost:3000/doc 
+
+Com o servidor backend rodando, é possível o acesso dessa documentação!
 
 
 
