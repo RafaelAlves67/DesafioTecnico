@@ -50,10 +50,10 @@ DB_PORT=5432 <br>
 edite de acordo com seu ambiente de desenvolvimento e banco de dados <br>
 
 # 5. Rodar a Aplicação
-## 5.1 para inicar o front-end, execute os seguintes comandos: 
+## 5.1 para inicar o front-end, execute os seguintes comandos na raíz do projeto: 
 cd frontend <br>
 npm run dev <br>
-## 5.2 para inicar o front-end, execute os seguintes comandos: 
+## 5.2 para inicar o back-end, execute os seguintes comandos na raíz do projeto: 
 cd backend <br>
 npm run dev <br>
 
