@@ -5,6 +5,9 @@ Projeto de teste prático com um to-do-list, tendo backend e frontend com funcio
 # Requisitos
 - Node Js
 - PostgreSQL
+- Vite
+- Typescript
+- React Js
 
 # Configuração do Ambiente de Desenvolvimento
 
