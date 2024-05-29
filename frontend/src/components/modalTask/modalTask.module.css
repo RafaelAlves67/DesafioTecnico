@@ -1,0 +1,75 @@
+.modal_register{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(26, 25, 25);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -30%);  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+    height: 60%;
+    width: 40%;
+}
+
+.modal_register h1,label,strong{
+    color: white;
+}
+
+.modal_register h1{
+    width: 60%;
+    text-align: center;
+    border-bottom: 2px solid rgb(63, 32, 32);
+}
+
+
+.modal_register input{
+    font-size: 1.2rem;
+}
+
+
+.div_btn_register{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.div_btn_register button{
+    margin: 5px;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.form input{
+    margin-bottom: 10px;
+}
+
+.textarea{
+    margin-bottom: 10px;
+}
+
+.p_error{
+    color: red;
+    font-size: 1.1rem;
+    background-color: #eea2a2;
+    padding: 3px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.p_sucess{
+    background-color: #00ff73cb;
+    border-radius: 10px;
+    padding: 3px;
+    color: green;
+    text-align: center;
+}

@@ -1,0 +1,374 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentação da API - Rafael Alves",
+        "description": "Essa documentação será feita para mostrar como nossa API foi contruída com o Node Js e Express",
+        "contact": {
+            "email": "rafudin@gmail.com"
+        },
+        "version": "1.0.0."
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "description": "Servidor Local"
+        }
+    ],
+    "paths": {
+        "/registerUser": {
+            "post": {
+                "summary": "Criar novo usuário",
+                "description": "Rota responsável por criar um novo usuário",
+                "tags": ["User"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schemma": {
+                                "$ref": "#/components/schemas/User"
+                            },
+                            "examples": {
+                                "User": {
+                                    "value": {
+                                        "name": "Rafael Alves",
+                                        "email": "rafael123@gmail.com",
+                                        "password": "123456",
+                                        "confirmPassword": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Campo vazio"
+                    },
+
+                    "409": {
+                        "description": "Email já cadastrado!"
+                    },
+
+                    "422": {
+                        "description": "A senha e a confirmação não correspondem!"
+                    },
+
+                    "200": {
+                        "description": "Usuário cadastrado!",
+                        "content": {
+                            "application/json": {
+                                "schemma": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/User"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/sign": {
+            "post": {
+                "summary": "Fazer login",
+                "description": "Rota responsável por fazer login no sistema",
+                "tags": ["User"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schemma": {
+                                "$ref": "#/components/schemas/User"
+                            },
+                            "examples": {
+                                "User": {
+                                    "value": {
+                                        "email": "rafael@gmail.com",
+                                        "password": "123456"
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Campos vazios"
+                    },
+
+                    "404": {
+                        "description": "Email não encontrado!"
+                    },
+
+                    "401": {
+                        "description": "Senha incorreta!"
+                    },
+
+                    "200": {
+                        "description": "Bem vindo ao nosso sistema!",
+                        "content": {
+                            "application/json": {
+                                "schemma": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/User"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/getTasks": {
+            "get": {
+                "summary": "Ler as tarefas cadastradas no banco",
+                "description": "Rota responsável por ler as tarefas cadastradas no banco de dados",
+                "tags": ["Task"],
+                "security": [{"verifyToken": []}],
+                "responses": {
+                    "401": {
+                        "description": "Acesso negado!"
+                    },
+
+                    "200": {
+                        "description": "Resultados das tarefas!",
+                        "content": {
+                            "application/json": {
+                                "schemma": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Task"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/registerTask": {
+            "post": {
+                "summary": "Cadastrar tarefas",
+                "description": "Rota responsável por cadastrar as tarefas cadastradas no banco de dados",
+                "tags": ["Task"],
+                "security": [{"verifyToken": []}],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Task"
+                            },
+                            "examples": {
+                                "Task": {  
+                                    "value":{
+                                        "title": "Nova tarefa",
+                                        "description": "Descrição da tarefa",
+                                        "status": "Pendente"  
+                                    }                    
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Campos vazios"
+                    },
+
+                    "401": {
+                        "description": "Acesso negado!"
+                    },
+
+                    "200": {
+                        "description": "Tarefa cadastrada!",
+                        "content": {
+                            "application/json": {
+                                "schemma": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Task"  
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/editTask/{id}": {
+            "put": {
+                "summary": "Editar tarefas",
+                "description": "Rota responsável por editar as tarefas cadastradas no banco de dados",
+                "tags": ["Task"],
+                "security": [{"verifyToken": []}],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "type": "number",
+                        "description": "Task ID",
+                        "required": "true"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Task"
+                            },
+                            "examples": {
+                                "Task": { 
+                                    "value": {
+                                        "title": "Titulo para ser editado"  
+                                    }                     
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Nada para ser alterado e tarefa não encontrada"
+                    },
+
+                    "401": {
+                        "description": "Acesso negado!"
+                    },
+
+                    "200": {
+                        "description": "Tarefa editada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "value": {
+                                        "description": "Título editado!"   
+                                    }
+                                                     
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/deleteTask/{id}": {
+            "delete": {
+                "summary": "Deletar tarefas",
+                "description": "Rota responsável por deletar as tarefas cadastradas no banco de dados",
+                "tags": ["Task"],
+                "security": [{"verifyToken": []}],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "type": "number",
+                        "description": "Task ID",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Tarefa não encontrada"
+                    },
+
+                    "401": {
+                        "description": "Acesso negado!"
+                    },
+
+                    "200": {
+                        "description": "Tarefa deletada!"
+                    }
+                }
+            }
+        },
+        "/search/:{title}": {
+            "get": {
+                "summary": "Pesquisar tarefas pelo titulo",
+                "description": "Rota responsável por pesquisar as tarefas cadastradas no banco de dados pelo titulo",
+                "tags": ["Task"],
+                "security": [{"verifyToken": []}],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "title",
+                        "type": "string",
+                        "description": "Titulo da tarefa",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "404": {
+                        "description": "Nenhuma tarefa encontrada com esse titulo"
+                    },
+
+                    "401": {
+                        "description": "Acesso negado!"
+                    },
+
+                    "200": {
+                        "description": "Tarefas encontradas pelo titulo",
+                        "content": {
+                            "application/json": {
+                                "schemma": {
+                                    "type": "object",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Task"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "verifyToken": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        },
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            },
+
+            "Task": {
+                "type": "object",
+                "properties": {                    
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+
+                    "status": {
+                        "type": "string"
+                    },
+
+                    "createdAt": {
+                        "type": "date"
+                    },
+
+                    "updatedAt": {
+                        "type": "date"
+                    }
+                }
+            }
+        }
+    }
+}

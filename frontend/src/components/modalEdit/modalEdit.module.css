@@ -1,0 +1,76 @@
+.modal_edit{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+     background-color: rgb(26, 25, 25); 
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -30%);  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+    height: 60%;
+    width: 40%;
+}
+
+ .modal_edit h1, .modal_edit label {
+    color: white;
+    background-color: rgb(26, 25, 25) !important; 
+} 
+
+.modal_edit h1{
+    width: 60%;
+    text-align: center;
+    border-bottom: 2px solid rgb(63, 32, 32);
+}
+
+.modal_edit input[type="text"],
+.modal_edit textarea,
+#select_status {
+     color: black !important;  
+}
+
+.modal_edit input, #select_status{
+    background-color: white !important;
+}
+
+.div_btn_register{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(26, 25, 25) !important;
+    padding: 10px;
+    align-items: center;
+}
+
+.div_btn_register button{
+    margin: 5px;
+}
+
+
+ .form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: start;
+} 
+
+.input_date{
+    color: black !important;
+} 
+
+.form input{
+    margin-bottom: 5px;
+}
+
+.form label{
+    text-align: start !important;
+}
+
+.textarea{
+    margin-bottom: 10px;
+    background-color: white !important;
+    color: black !important; 
+}
+ 

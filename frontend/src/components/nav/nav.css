@@ -1,0 +1,46 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(7, 7, 7);
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav h1{
+    color: white;
+    cursor: pointer;
+}
+
+nav h1 strong{
+    color: red;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav ul li {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav ul li a:hover{
+    font-size: 1.1rem;
+    transition: .1s;
+}
+
+.btn-logout{
+    padding: 0px 15px;
+    cursor: pointer;
+    font-size: 15px;
+}

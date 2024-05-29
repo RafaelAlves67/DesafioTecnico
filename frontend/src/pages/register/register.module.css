@@ -1,0 +1,90 @@
+.div_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+} 
+
+.container {
+    width: 450px;
+    background: rgba(226, 221, 221, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: auto;
+    /* margin-top: 15px; */
+}
+  
+.container h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffff;
+}
+  
+.container .inputfield {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px auto;
+}
+  
+.inputfield input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 25px;
+}
+  
+.inputfield input::placeholder {
+    color: #fff;
+}
+  
+.inputfield .icon {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+}
+   
+.container button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.error{
+    margin-top: 10px;
+    background-color: #eea2a2;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    color: red;
+}
+
+.sucess{
+    margin-top: 10px;
+    background-color: #00ff73cb;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    color: green;
+}
