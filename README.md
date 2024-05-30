@@ -12,7 +12,7 @@ Projeto de teste prático com um to-do-list, tendo backend e frontend com funcio
 # Configuração do Ambiente de Desenvolvimento
 
 # 1. Clonar o Repositório
-git clone https://github.com/RafaelAlves67/DesafioTecnico.git
+git clone https://github.com/RafaelAlves67/DesafioTecnico.git <br>
 cd DesafioTecnico
 
 # 2. Instalar Depedências 
