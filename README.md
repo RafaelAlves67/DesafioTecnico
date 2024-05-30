@@ -1,6 +1,6 @@
 # Desafio Tecnico
 
-Projeto de teste prático com um to-do-list, tendo backend e frontend com funcionalidades de listagem de tarefas, atualizações de tarefas, criação de tarefas e exclusão de tarefas, e com uma implementação de cadastro e autenticação de usuário (JWT)
+Projeto de teste prático com um to-do-list, tendo backend com Noje Js, Express e PostgreSQL e frontend com React Js e Typescript com funcionalidades de listagem de tarefas, atualizações de tarefas, criação de tarefas, exclusão de tarefas, e com uma implementação de cadastro e autenticação de usuário (JWT)
 
 # Requisitos
 - Node Js
