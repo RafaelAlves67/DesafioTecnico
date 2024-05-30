@@ -23,7 +23,7 @@ const modalTask = ({ setModalTask, setTasks }: Props) => {
     // estados dos campos das tarefas
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
-    const [status, setStatus] = useState('')
+    const [status, setStatus] = useState('Pendente')
 
 
     // estado para msg de erro
@@ -64,7 +64,7 @@ const modalTask = ({ setModalTask, setTasks }: Props) => {
                 <textarea className={styles.textarea} onChange={(e) => setDescription(e.target.value)} />
 
                 <label>Status</label>
-                <select className="form-select" aria-label="Default select example" onChange={(e) => setStatus(e.target.value)}>
+                <select className="form-select" aria-label="Default select example" value={status} onChange={(e) => setStatus(e.target.value)}>
                     <option selected value='Pendente'>Pendente</option>
                     <option value="Em progresso">Em progresso</option>
                     <option value="Concluída">Concluída</option>
